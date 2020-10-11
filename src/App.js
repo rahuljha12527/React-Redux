@@ -1,13 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import CakeContainer from './components/CakeContainer';
+import React from "react";
+import "./App.css";
+import store from './redux/store'
+import { Provider } from "react-redux";
+import CakeContainer from "./components/CakeContainer";
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={store}>
+      <div className="App">
         <CakeContainer />
-    </div>
+      </div>
+    </Provider>
   );
 }
 
